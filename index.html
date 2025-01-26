@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="guppydz">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>guppydz</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<script src="flutter_bootstrap.js" async></script>
+<script type="module">
+    // Import Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+    import { getStorage } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-storage.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyA6VmRQ4MABUqRC6ffDg5NUuJBlgrRnTMk",
+  authDomain: "guppydz.firebaseapp.com",
+  projectId: "guppydz",
+  storageBucket: "guppydz.firebasestorage.app",
+  messagingSenderId: "581836025366",
+  appId: "1:581836025366:web:ab7bc66f39b527eb1b8f37"
+};
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+
+    console.log("Firebase initialized successfully!");
+  </script>
+</body>
+</html>
